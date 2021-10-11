@@ -1,0 +1,714 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2021.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroInput.MacroInput">
+        <Position x="198" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UseFileInput value="True" />
+          <Name>Input1</Name>
+          <Abbrev />
+          <ShowFieldMap value="True" />
+          <Optional value="False" />
+          <FileInput>
+            <Configuration>
+              <Passwords />
+              <File OutputFileName="" FileFormat="19" SearchSubDirs="False" RecordLimit="">D:\dog_data.yxdb</File>
+              <FormatSpecificOptions />
+            </Configuration>
+          </FileInput>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>dog_data.yxdb</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="X" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="Y" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="Z" source="File: D:\dog_points.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="198" y="618" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="1" />
+          <Fields>
+            <Field name="number of X rotations" />
+            <Field name="number of Y rotations" />
+            <Field name="perspective" />
+          </Fields>
+          <Data>
+            <r>
+              <c>3</c>
+              <c>3</c>
+              <c>True</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="number of X rotations" source="TextInput:" type="Byte" />
+            <Field name="number of Y rotations" source="TextInput:" type="Byte" />
+            <Field name="perspective" source="TextInput:" type="Bool" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.Tab.Tab">
+        <Position x="0" y="0" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="138" y="462" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Numeric Up Down (8)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="138" y="534" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+        <Position x="222" y="462" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Numeric Up Down (10)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="222" y="534" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+        <Position x="282" y="540" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Update Value</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+        <Position x="294" y="462" width="59" height="59" />
+      </GuiSettings>
+      <Properties>
+        <Configuration />
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Check Box (15)</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="JupyterCode">
+        <Position x="558" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <WorkflowName>d:\tableau_3d_project.yxmc</WorkflowName>
+          <JupyterProduction>true</JupyterProduction>
+          <vEnvName>designerbasetools_venv</vEnvName>
+          <DefaultVenv>1</DefaultVenv>
+          <productionModeScript>#################################
+# List all non-standard packages to be imported by your 
+# script here (only missing packages will be installed)
+from ayx import Package
+#Package.installPackages(['pandas','numpy'])
+import numpy as np
+import pandas as pd
+
+
+#################################
+from ayx import Alteryx
+
+data = Alteryx.read('#1')
+parameters = Alteryx.read('#2')
+
+
+#################################
+# Get only relevant values for data
+data = data[['X', 'Y', 'Z']]
+
+
+#################################
+# Get parameters from parameters data frame
+n_x_rotations = parameters['number of X rotations'][0]
+n_y_rotations = parameters['number of Y rotations'][0]
+perspective = parameters['perspective'][0].astype(bool)
+
+
+#################################
+def _3d_rotation_matrix(theta, axis):
+    # 3d rotation matrix for given angle theta and axis
+    # theta is angle in radians
+    # axis is string axis to rotate around
+    s = np.sin(theta)
+    c = np.cos(theta)
+    if axis.lower() == 'x':
+        return np.array([
+            [1, 0, 0],
+            [0, c, -s],
+            [0, s, c]
+        ])
+    elif axis.lower() == 'y':
+        return np.array([
+            [c, 0, s],
+            [0, 1, 0],
+            [-s, 0, c]
+        ])
+    elif axis.lower() == 'z':
+        return np.array([
+            [c, -s, 0],
+            [s, c, 0],
+            [0, 0, 1]
+        ])
+    else:
+        return None
+
+
+#################################
+def norm_XYZ(sh):
+    # sh is np.array of shape [n, 3] where the order is X, Y, Z
+    # returns the minmax scaled data + 1 (scaled between 1 &amp; 2 to avoid divide by 0)
+    mn = sh.min(axis=0)
+    mx = sh.max(axis=0)
+    return (sh-mn) / (mx-mn) + 1
+
+
+#################################
+def project_3d_to_2d(data, f=1, camera=[1.5, 1.5, 1.5]):
+    # returns tuple of X', Y' and Z where X' and Y' are
+    # perspective projected X and Y
+    # data is [n, 3] dimension numpy array of [X, Y, Z]
+    # f is distance to plane of projection
+    # camera is the location of the camera
+    X = data[:,0]
+    Y = data[:,1]
+    Z = data[:,2]
+    X_dash = (X-camera[0]) * (f / Z) + camera[0]
+    Y_dash = (Y-camera[1]) * (f / Z) + camera[1]
+    return (X_dash, Y_dash, Z)
+
+
+#################################
+def plot_n_rotations(data, n_x_rotations, n_y_rotations, perspective=True):
+    # data is [n, 3] dimension numpy array of [X, Y, Z]
+    # n_x_rotations is number of rotations around x axis
+    # n_y_rotations is number of rotations around y axis
+    # perspective is bool of whether to use perspective projection
+    #     or just linear projection
+    x_rotation_angle = 2 * np.pi / (n_x_rotations + 1)
+    y_rotation_angle = 2 * np.pi / (n_y_rotations + 1)
+    
+    norm_data = norm_XYZ(data)
+    
+    projected_arrays = []
+    
+    for x_r in range(n_x_rotations + 1):
+        for y_r in range(n_y_rotations + 1):
+            X_rotation_matrix = _3d_rotation_matrix(x_rotation_angle * x_r, 'x')
+            Y_rotation_matrix = _3d_rotation_matrix(y_rotation_angle * y_r, 'y')
+            
+            rotated_data = np.matmul(np.matmul(norm_data, X_rotation_matrix), Y_rotation_matrix)
+            rotated_data = norm_XYZ(rotated_data)
+            
+            if perspective:
+                projected_data = project_3d_to_2d(rotated_data)
+                projected_arr = np.column_stack(projected_data) - 1
+            else:
+                projected_arr = rotated_data - 1
+            
+            # Put it in nice format for tableau
+            # columns = [X_projected, Y_projected, colour, x_rotation, y_rotation]
+            x_r_array = np.ones(projected_arr.shape[0]) * x_r
+            y_r_array = np.ones(projected_arr.shape[0]) * y_r
+            projected_with_index = np.column_stack((projected_arr, x_r_array, y_r_array))
+            projected_arrays.append(projected_with_index)
+    
+    return np.vstack(projected_arrays)
+
+
+#################################
+plotted_data = plot_n_rotations(data.to_numpy(), n_x_rotations, 
+                                n_y_rotations, perspective=perspective)
+
+
+#################################
+df = pd.DataFrame(plotted_data,
+                 columns=['X_transformed', 'Y_transformed', 'colour',
+                         'X_iteration', 'Y_iteration'])
+
+
+#################################
+Alteryx.write(df, 1)</productionModeScript>
+          <Port>56216</Port>
+          <JupyterGuidDir>97eb8bc8403e0d8b4e22b9b4c3b2c6b2</JupyterGuidDir>
+          <JupyterGuidCopy />
+          <LastExecutedByEngineVersion>2021.3.1.47945</LastExecutedByEngineVersion>
+          <Notebook><![CDATA[{"cells":[{"cell_type":"markdown","metadata":{"ayx":{"cell_class":"text_cell","cell_css":"border: 3px solid #357; margin: 4px; background: #fbffff","cell_type":"markdown","contents_keyword":"Alteryx.help()","first_line":"Run `Alteryx.help()` for info about useful functions.","label":"info"}},"source":["Run `Alteryx.help()` for info about useful functions.  \n","i.e., `Alteryx.read(\"#1\")`, `Alteryx.write(df,1)`, `Alteryx.getWorkflowConstant(\"Engine.WorkflowDirectory\")`"]},{"cell_type":"code","execution_count":1,"metadata":{"ayx":{"cell_class":"code_cell","cell_css":"border: 1px solid #58a; margin: 2px;","cell_type":"code","contents_keyword":"installPackages","first_line":"# List all non-standard packages to be imported by your","label":"deps"}},"outputs":[],"source":["# List all non-standard packages to be imported by your \n","# script here (only missing packages will be installed)\n","from ayx import Package\n","#Package.installPackages(['pandas','numpy'])\n","import numpy as np\n","import pandas as pd"]},{"cell_type":"code","execution_count":2,"metadata":{},"outputs":[],"source":["from ayx import Alteryx\n","\n","data = Alteryx.read('#1')\n","parameters = Alteryx.read('#2')"]},{"cell_type":"code","execution_count":3,"metadata":{},"outputs":[],"source":["# Get only relevant values for data\n","data = data[['X', 'Y', 'Z']]"]},{"cell_type":"code","execution_count":4,"metadata":{},"outputs":[],"source":["# Get parameters from parameters data frame\n","n_x_rotations = parameters['number of X rotations'][0]\n","n_y_rotations = parameters['number of Y rotations'][0]\n","perspective = parameters['perspective'][0].astype(bool)"]},{"cell_type":"code","execution_count":5,"metadata":{},"outputs":[],"source":["def _3d_rotation_matrix(theta, axis):\n","    # 3d rotation matrix for given angle theta and axis\n","    # theta is angle in radians\n","    # axis is string axis to rotate around\n","    s = np.sin(theta)\n","    c = np.cos(theta)\n","    if axis.lower() == 'x':\n","        return np.array([\n","            [1, 0, 0],\n","            [0, c, -s],\n","            [0, s, c]\n","        ])\n","    elif axis.lower() == 'y':\n","        return np.array([\n","            [c, 0, s],\n","            [0, 1, 0],\n","            [-s, 0, c]\n","        ])\n","    elif axis.lower() == 'z':\n","        return np.array([\n","            [c, -s, 0],\n","            [s, c, 0],\n","            [0, 0, 1]\n","        ])\n","    else:\n","        return None"]},{"cell_type":"code","execution_count":6,"metadata":{},"outputs":[],"source":["def norm_XYZ(sh):\n","    # sh is np.array of shape [n, 3] where the order is X, Y, Z\n","    # returns the minmax scaled data + 1 (scaled between 1 & 2 to avoid divide by 0)\n","    mn = sh.min(axis=0)\n","    mx = sh.max(axis=0)\n","    return (sh-mn) / (mx-mn) + 1"]},{"cell_type":"code","execution_count":7,"metadata":{},"outputs":[],"source":["def project_3d_to_2d(data, f=1, camera=[1.5, 1.5, 1.5]):\n","    # returns tuple of X', Y' and Z where X' and Y' are\n","    # perspective projected X and Y\n","    # data is [n, 3] dimension numpy array of [X, Y, Z]\n","    # f is distance to plane of projection\n","    # camera is the location of the camera\n","    X = data[:,0]\n","    Y = data[:,1]\n","    Z = data[:,2]\n","    X_dash = (X-camera[0]) * (f / Z) + camera[0]\n","    Y_dash = (Y-camera[1]) * (f / Z) + camera[1]\n","    return (X_dash, Y_dash, Z)"]},{"cell_type":"code","execution_count":8,"metadata":{},"outputs":[],"source":["def plot_n_rotations(data, n_x_rotations, n_y_rotations, perspective=True):\n","    # data is [n, 3] dimension numpy array of [X, Y, Z]\n","    # n_x_rotations is number of rotations around x axis\n","    # n_y_rotations is number of rotations around y axis\n","    # perspective is bool of whether to use perspective projection\n","    #     or just linear projection\n","    x_rotation_angle = 2 * np.pi / (n_x_rotations + 1)\n","    y_rotation_angle = 2 * np.pi / (n_y_rotations + 1)\n","    \n","    norm_data = norm_XYZ(data)\n","    \n","    projected_arrays = []\n","    \n","    for x_r in range(n_x_rotations + 1):\n","        for y_r in range(n_y_rotations + 1):\n","            X_rotation_matrix = _3d_rotation_matrix(x_rotation_angle * x_r, 'x')\n","            Y_rotation_matrix = _3d_rotation_matrix(y_rotation_angle * y_r, 'y')\n","            \n","            rotated_data = np.matmul(np.matmul(norm_data, X_rotation_matrix), Y_rotation_matrix)\n","            rotated_data = norm_XYZ(rotated_data)\n","            \n","            if perspective:\n","                projected_data = project_3d_to_2d(rotated_data)\n","                projected_arr = np.column_stack(projected_data) - 1\n","            else:\n","                projected_arr = rotated_data - 1\n","            \n","            # Put it in nice format for tableau\n","            # columns = [X_projected, Y_projected, colour, x_rotation, y_rotation]\n","            x_r_array = np.ones(projected_arr.shape[0]) * x_r\n","            y_r_array = np.ones(projected_arr.shape[0]) * y_r\n","            projected_with_index = np.column_stack((projected_arr, x_r_array, y_r_array))\n","            projected_arrays.append(projected_with_index)\n","    \n","    return np.vstack(projected_arrays)"]},{"cell_type":"code","execution_count":9,"metadata":{},"outputs":[],"source":["plotted_data = plot_n_rotations(data.to_numpy(), n_x_rotations, \n","                                n_y_rotations, perspective=perspective)"]},{"cell_type":"code","execution_count":10,"metadata":{},"outputs":[],"source":["df = pd.DataFrame(plotted_data,\n","                 columns=['X_transformed', 'Y_transformed', 'colour',\n","                         'X_iteration', 'Y_iteration'])"]},{"cell_type":"code","execution_count":11,"metadata":{},"outputs":[],"source":["Alteryx.write(df, 1)"]}],"metadata":{"kernelspec":{"display_name":"designerbasetools_venv","language":"python","name":"designerbasetools_venv"},"language_info":{"codemirror_mode":{"name":"ipython","version":3},"file_extension":".py","mimetype":"text/x-python","name":"python","nbconvert_exporter":"python","pygments_lexer":"ipython3","version":"3.8.5"}},"nbformat":4,"nbformat_minor":2}]]></Notebook>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxJupyterPluginEngine.dll" EngineDllEntryPoint="AlteryxJupyter" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="318" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="X" selected="True" rename="x" />
+            <SelectField field="Y" selected="True" rename="y" />
+            <SelectField field="Z" selected="True" rename="z" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="x" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="y" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="z" source="File: D:\dog_points.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="414" y="330" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="x" selected="True" rename="X" />
+            <SelectField field="y" selected="True" rename="Y" />
+            <SelectField field="z" selected="True" rename="Z" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="X" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="Y" source="File: D:\dog_points.csv" type="Double" />
+            <Field name="Z" source="File: D:\dog_points.csv" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MultiRowFormula.MultiRowFormula">
+        <Position x="750" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UpdateField value="False" />
+          <UpdateField_Name />
+          <CreateField_Name>new_record_id</CreateField_Name>
+          <CreateField_Type>Int32</CreateField_Type>
+          <CreateField_Size>4</CreateField_Size>
+          <OtherRows>Empty</OtherRows>
+          <NumRows value="1" />
+          <Expression>[Row-1:new_record_id] + 1</Expression>
+          <GroupByFields>
+            <Field field="X_iteration" />
+            <Field field="Y_iteration" />
+          </GroupByFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[Row-1:new_record_id] + 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="X_transformed" source="PythonTool:" type="Double" />
+            <Field name="Y_transformed" source="PythonTool:" type="Double" />
+            <Field name="colour" source="PythonTool:" type="Double" />
+            <Field name="X_iteration" source="PythonTool:" type="Double" />
+            <Field name="Y_iteration" source="PythonTool:" type="Double" />
+            <Field description="Formula: [Row-1:new_record_id] + 1" name="new_record_id" source="Formula: [Row-1:new_record_id] + 1" type="Int32" />
+          </RecordInfo>
+          <SortInfo>
+            <Field field="X_iteration" order="Asc" />
+            <Field field="Y_iteration" order="Asc" />
+          </SortInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMultiRowFormula" />
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="654" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="X_transformed" source="PythonTool:" type="Double" />
+            <Field name="Y_transformed" source="PythonTool:" type="Double" />
+            <Field name="colour" source="PythonTool:" type="Double" />
+            <Field name="X_iteration" source="PythonTool:" type="Double" />
+            <Field name="Y_iteration" source="PythonTool:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="23">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.MacroOutput.MacroOutput">
+        <Position x="834" y="486" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Name>Output23</Name>
+          <Abbrev />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Output</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxMacroOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="19" Connection="Output" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="8" Connection="Question" />
+      <Destination ToolID="9" Connection="Question" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection name="#3">
+      <Origin ToolID="11" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection name="#4">
+      <Origin ToolID="13" Connection="Action" />
+      <Destination ToolID="2" Connection="Action" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Question" />
+      <Destination ToolID="11" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="15" Connection="Question" />
+      <Destination ToolID="13" Connection="Question" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output1" />
+      <Destination ToolID="21" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="19" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="20" Connection="Output" />
+      <Destination ToolID="23" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="21" Connection="Output" />
+      <Destination ToolID="20" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <PredictiveToolsCodePage value="1252" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <Constants>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Input (1)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (8)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Numeric Up Down (10)</Name>
+        <Value />
+        <IsNumeric value="True" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Check Box (15)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>Macro Output (23)</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+    </Constants>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>tableau_3d_project</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+      <WorkflowId value="b0eaf666-69e9-4a12-83c4-b12eef1e3e9d" />
+      <Telemetry>
+        <PreviousWorkflowId value="a0b67276-2171-4f70-a28c-e996e7fe4d9d" />
+        <OriginWorkflowId value="a0b67276-2171-4f70-a28c-e996e7fe4d9d" />
+      </Telemetry>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+    <RuntimeProperties>
+      <Actions>
+        <NoCondition>
+          <Type>NoCondition</Type>
+          <Description>(Always Run)</Description>
+          <True>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="9" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>2/Data/r[1]/c[1]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	1</DynamicConfiguration>
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="11" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>2/Data/r[1]/c[2]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	2</DynamicConfiguration>
+              <DefaultConfiguration value="False" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="13" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>2/Data/r[1]/c[3]</Destination>
+              <Mapping>Update Cell</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration>row	1
+column	3</DynamicConfiguration>
+              <DefaultConfiguration value="False" />
+            </Action>
+          </True>
+        </NoCondition>
+      </Actions>
+      <Questions>
+        <Question>
+          <Type>Tab</Type>
+          <Description>Questions</Description>
+          <Name>Tab (7)</Name>
+          <ToolId value="7" />
+          <Questions>
+            <Question>
+              <Type>MacroInput</Type>
+              <Description />
+              <Name>Macro Input (1)</Name>
+              <ToolId value="1" />
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of X axis rotations</Description>
+              <Name>Numeric Up Down (8)</Name>
+              <ToolId value="8" />
+              <Minimum value="0" />
+              <Maximum value="100" />
+              <Increment value="1" />
+              <Default value="3" />
+              <Decimals value="0" />
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of Y axis rotations</Description>
+              <Name>Numeric Up Down (10)</Name>
+              <ToolId value="10" />
+              <Minimum value="0" />
+              <Maximum value="100" />
+              <Increment value="1" />
+              <Default value="3" />
+              <Decimals value="0" />
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Perspective projection</Description>
+              <Name>Check Box (15)</Name>
+              <ToolId value="15" />
+              <Questions />
+              <Default value="True" />
+              <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>MacroOutput</Type>
+              <Description>Macro Output (23)</Description>
+              <Name>Macro Output (23)</Name>
+              <ToolId value="23" />
+            </Question>
+          </Questions>
+        </Question>
+      </Questions>
+      <ModuleType>Macro</ModuleType>
+      <MacroCustomHelp value="False" />
+      <MacroDynamicOutputFields value="False" />
+      <MacroImage>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</MacroImage>
+      <MacroInputs />
+      <MacroOutputs />
+      <Wiz_CustomHelp value="False" />
+      <Wiz_CustomGraphic value="False" />
+      <Wiz_ShowOutput value="True" />
+      <Wiz_OpenOutputTools>
+        <Tool ToolId="23" Selected="True" />
+      </Wiz_OpenOutputTools>
+      <Wiz_OutputMessage />
+      <Wiz_NoOutputFilesMessage />
+      <Wiz_ChainRunWizard />
+    </RuntimeProperties>
+  </Properties>
+</AlteryxDocument>
